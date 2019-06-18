@@ -68,8 +68,10 @@ class App extends React.Component {
         return (
             <div className="example-wrapper" style={{ minHeight: '400px' }}>
                 <h4>Hinweis: 
-                Diese Eingabefelder möchten wir für die kommenden Anwendungen verwenden. Bitte schaut sie euch an und sagt uns was ihr denkt. Es kommen noch mehr dazu
+                Diese Eingabefelder möchten wir für die kommenden Anwendungen verwenden. Bitte schaut sie euch an und sagt uns was ihr denkt. Es kommen noch mehr dazu. 
                 Einiges hier erscheint auf Englisch (Dezimaltrenner, feste Texte wie Month). Das wird nur in dieser Demo so sein. </h4>
+                <p />
+                <h4>Datumsfelder</h4>
                 <div className="col-xs-12 col-sm-12 example-col">
                     <p>Tag wählen (für Monat numerische eingabe und Montaskürzelausgabe):</p>
                     <DatePicker format={"dd-MMM-yyyy"} width={200}
