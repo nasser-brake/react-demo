@@ -108,7 +108,7 @@ class App extends React.Component {
                 </div>   
                 <div>
                     <div className="example-config">
-                        <p>Wähle einen Datumsbereich. Hier kann ich Mindest- und Höchstwerte definieren:</p>
+                        <p>Wähle einen Datumsbereich. Hier kann ich Mindest- und Höchstwerte definieren. Hier sind das 1.8.2018 und 25.9.2015:</p>
                         <DateRangePicker
                             min={this.min}
                             max={this.max}
