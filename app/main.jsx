@@ -76,6 +76,7 @@ class App extends React.Component {
                     <p>Tag wählen (für Monat numerische eingabe und Montaskürzelausgabe):</p>
                     <DatePicker format={"dd-MMM-yyyy"} width={200}
                     />
+                    <p>(use Alt+<code>↓</code> to open the calendar, <code>←</code> and <code>→</code> to navigate, <code>↑</code> to increment and <code>↓</code> to decrement the value).  Monatseingabe  als Zahl auch möglich, trotzdem erscheint der Name des Monats.</p>             
                 </div>
                 <div className="col-xs-12 col-sm-12 example-col">
                     <p>Monat wählen:</p>
@@ -98,14 +99,6 @@ class App extends React.Component {
                         defaultValue={this.defaultValue}
                     />
                 </div> 
-                <div className="col-xs-12 col-sm-12 example-col">
-                  <p>Datumeingabe ohne Maus:</p>
-                    <DatePicker
-                        ref={(picker) => { this.picker = picker }}
-                        defaultValue={this.value}
-                    />
-                    <p>(use Alt+<code>↓</code> to open the calendar, <code>←</code> and <code>→</code> to navigate, <code>↑</code> to increment and <code>↓</code> to decrement the value).</p>
-                </div>   
                 <div>
                     <div className="example-config">
                         <p>Wähle einen Datumsbereich. Hier kann ich Mindest- und Höchstwerte definieren. Hier sind das 1.8.2018 und 25.9.2015:</p>
@@ -119,13 +112,14 @@ class App extends React.Component {
                 </div>
                 <div>
                   <h4>Numerische Eingabefelder</h4>
-                  <p>Diese Felder unterstützen per default die englischen Punkt-Als-Komma Regel.  Bitte beachtet die Bezeichner die im Feld erscheine, und bei Beginn der Eingabe oberhalb des Felds sich platzieren. </p>
+                  <p>Diese Felder unterstützen per default die englischen Punkt-Als-Komma Regel.  Bitte beachtet die Label (Bezeichner), die im Feld erscheinen und bei Beginn der Eingabe oberhalb des Felds erscheinen. </p>
                   <h6>Decimal</h6>
                   <NumericTextBox
                       label="Fläche"
                       defaultValue={10000}
                       format="n2"
                   />
+                  <p/>
                   <h6>Percentage</h6>
                   <NumericTextBox
                       format="p"
@@ -134,12 +128,14 @@ class App extends React.Component {
                       max={1}
                       step={0.1}
                   />
+                  <p/>
                   <h6>Currency</h6>
                   <NumericTextBox
                       label="Preis"
                       format="c2"
                       min={0}
                   />
+                  <p/>
                   <h6>Currency with format options</h6>
                   <NumericTextBox
                       label="Preis mit Währung"
@@ -162,7 +158,7 @@ class App extends React.Component {
                       data={this.state.autoCompleteData}
                       value={this.state.autoCompleteValue}
                       onChange={this.onAutoCompleteChange}
-                      placeholder="e.g. Austria" />
+                      placeholder="e.g. Andorra" />
                 </div>
             </div>
         )
